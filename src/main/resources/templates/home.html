@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--        th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"-->
+
+<head>
+    <title>Home page</title>
+    <link rel="stylesheet" data-th-href="@{'css/output.css'}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="content" >
+        <h1 class="text-2 font-bold" data-th-text="${name}">Welcome to home page</h1>
+        <p> Github URL: <span th:text="${githubRepo}"></span></p>
+        <a th:href="${githubRepo}">Github</a>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+            ratione!
+        </p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
+</html>
